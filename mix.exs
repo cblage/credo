@@ -40,7 +40,8 @@ defmodule Credo.Mixfile do
   defp deps do
     [
       {:bunt, "~> 0.2.0"},
-      {:json, "~> 1.0"}
+      {:json, "~> 1.0"},
+      {:inch_ex, only: [:dev, :test, :docs]}
     ]
   end
 end

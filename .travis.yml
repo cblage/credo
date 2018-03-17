@@ -9,4 +9,6 @@ script:
   - ./test/smoke_test.sh
   - ./test/check_formatted.sh
 after_script:
-  - MIX_ENV=test mix inch.report
+  - mix deps.get --only docs
+  - MIX_ENV=docs mix inch.report
+
