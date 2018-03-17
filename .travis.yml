@@ -4,17 +4,9 @@ elixir:
   - 1.4
   - 1.5
   - 1.6
-otp_release:
-  - 18.3
-  - 19.3
-  - 20.2
 script:
   - mix test
   - ./test/smoke_test.sh
   - ./test/check_formatted.sh
 after_script:
   - MIX_ENV=test mix inch.report
-matrix:
-  exclude:
-  - elixir: 1.6.1
-    otp_release: 18.3
